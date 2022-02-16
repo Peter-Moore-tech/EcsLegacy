@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ECS.Legacy
+namespace ECS.Redesign
 {
     class Program
     {
@@ -9,7 +9,7 @@ namespace ECS.Legacy
             Console.WriteLine("Testing ECS.Legacy");
 
             // Make an ECS with a threshold of 23
-            var control = new ECS(23, new TempSensor(), new Heater());
+            var control = new Redesign.ECS(23, new TempSensor(), new Heater.Heater());
 
             for (int i = 1; i <= 15; i++)
             {
