@@ -90,13 +90,26 @@ namespace Test
         }
 
         [Test]
-        public void RunSelfTest_SelfTestTrue_ResultTrue()
+        public void RunSelfTest_GetTemp17Threshold23RegulateSetThreshold12Regulate_RunSelfTestTrue()
         {
             // Arrange
+            // ACT
+            uut.Regulate();
+            uut.SetThreshold(12);
+            uut.Regulate();
 
-            Assert.That(uut.RunSelfTest(),Is.EqualTo(true));
+            Assert.That(uut.RunSelfTest(),Is.True);
         }
 
+        [Test]
+        public void RunSelfTest_GetTemp17Threshold23Regulate_RunSelfTestFalse()
+        {
+            // Arrange
+            // ACT
+            uut.Regulate();
+
+            Assert.That(uut.RunSelfTest(), Is.False);
+        }
 
     }
 }
