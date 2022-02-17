@@ -1,6 +1,6 @@
 ﻿namespace Redesign.Heater
 {
-    internal class FakeHeater : IHeater
+    public class FakeHeater : IHeater
     {
         public bool RunSelfTest()
         {
