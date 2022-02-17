@@ -1,6 +1,6 @@
 ﻿namespace Redesign.TempSensor
 {
-    internal class FakeTempSensor: ITempSensor
+    public class FakeTempSensor: ITempSensor
     {
         public int RandomNumber { get; set; } = 0;
 
