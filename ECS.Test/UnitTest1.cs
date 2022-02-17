@@ -32,7 +32,7 @@ namespace Test
         public void Regulate_GetTemp17Treshold12_ResHeaterTurnOffIs0()
         {
             //ACT
-            uut.SetThreshold(12);
+            uut.SetThreshold(13);
             uut.Regulate();
             //ASSERT
             Assert.That(heater.HeaterStatus, Is.EqualTo(0));
@@ -93,7 +93,6 @@ namespace Test
         public void RunSelfTest_SelfTestTrue_ResultTrue()
         {
             // Arrange
-            ItempSensor.
 
             Assert.That(uut.RunSelfTest(),Is.EqualTo(true));
         }

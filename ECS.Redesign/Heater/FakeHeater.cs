@@ -15,10 +15,10 @@
 
         public void TurnOn()
         {
-           HeaterStatus++;
+           HeaterStatus=1;
             SelfTestResult=true;
         }
-        public int HeaterStatus { get; set; } = 0;
+        public int HeaterStatus { get; set; } = 2;
         public bool SelfTestResult { get; set; }
     }
 }
