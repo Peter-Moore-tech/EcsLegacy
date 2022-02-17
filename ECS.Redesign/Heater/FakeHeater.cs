@@ -4,22 +4,21 @@
     {
         public bool RunSelfTest()
         {
-            if (turnOffWasCalled && turnOnWasCalled)
-                return true;
-            return false;
+            return SelfTestResult;
         }
 
         public void TurnOff()
         {
-            turnOffWasCalled = true;
+           HeaterStatus=0;
+            SelfTestResult=false;
         }
 
         public void TurnOn()
         {
-            turnOnWasCalled = true;
+           HeaterStatus++;
+            SelfTestResult=true;
         }
-
-        public bool turnOffWasCalled { get; set; }
-        public bool turnOnWasCalled { get; set; }
+        public int HeaterStatus { get; set; } = 0;
+        public bool SelfTestResult { get; set; }
     }
 }

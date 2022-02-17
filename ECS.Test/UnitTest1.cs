@@ -9,24 +9,33 @@ namespace Test
     public class Tests
     {
         private ECS uut;
-        private ITempSensor tempSensor;
-        private IHeater heater;
+        private FakeTempSensor tempSensor = new FakeTempSensor();
+        private FakeHeater heater = new FakeHeater();
 
         [SetUp]
         public void Setup()
         {
-            tempSensor = new FakeTempSensor();
-            heater = new FakeHeater();
             uut = new ECS(23, tempSensor, heater);
         }
 
         [Test]
-        public void Regulate_GetTemp17Treshold23_ResHeaterTurnOnTrue()
+        public void Regulate_GetTemp17Treshold23_ResHeaterTurnOnIs1()
         {
             //ACT
             uut.Regulate();
             //ASSERT
-            Assert.That(uut., Is.EqualTo(true));
+            Assert.That(heater.HeaterStatus, Is.EqualTo(1));
+        }
+
+
+        [Test]
+        public void Regulate_GetTemp17Treshold12_ResHeaterTurnOffIs0()
+        {
+            //ACT
+            uut.SetThreshold(12);
+            uut.Regulate();
+            //ASSERT
+            Assert.That(heater.HeaterStatus, Is.EqualTo(0));
         }
 
         //public void Regulate()
