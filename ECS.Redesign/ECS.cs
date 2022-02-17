@@ -1,7 +1,8 @@
 ﻿using System;
-using ECS.Redesign.Heater;
+using Redesign.Heater;
+using Redesign.TempSensor;
 
-namespace ECS.Redesign
+namespace Redesign
 {
     public class ECS
     {

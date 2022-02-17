@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ECS.Redesign.TempSensor
+namespace Redesign.TempSensor
 {
     internal class TempSensor : ITempSensor
     {

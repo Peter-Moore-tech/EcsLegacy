@@ -1,4 +1,4 @@
-﻿namespace ECS.Redesign
+﻿namespace Redesign.TempSensor
 {
     public interface ITempSensor
     {

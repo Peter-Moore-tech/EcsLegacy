@@ -1,4 +1,4 @@
-﻿namespace ECS.Redesign.Heater
+﻿namespace Redesign.Heater
 {
     internal class FakeHeater : IHeater
     {
