@@ -32,7 +32,7 @@ namespace Test
         public void Regulate_GetTemp17Treshold12_ResHeaterTurnOffIs0()
         {
             //ACT
-            uut.SetThreshold(13);
+            uut.SetThreshold(12);
             uut.Regulate();
             //ASSERT
             Assert.That(heater.HeaterStatus, Is.EqualTo(0));
