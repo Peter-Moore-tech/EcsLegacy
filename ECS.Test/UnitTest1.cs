@@ -9,12 +9,14 @@ namespace Test
     public class Tests
     {
         private ECS uut;
-        private FakeTempSensor tempSensor = new FakeTempSensor();
-        private FakeHeater heater = new FakeHeater();
+        private FakeTempSensor tempSensor;
+        private FakeHeater heater;
 
         [SetUp]
         public void Setup()
         {
+            tempSensor = new FakeTempSensor();
+            heater = new FakeHeater();
             uut = new ECS(23, tempSensor, heater);
         }
 
