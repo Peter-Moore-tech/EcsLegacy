@@ -64,24 +64,6 @@ namespace Test
             Assert.That(uut.GetThreshold(), Is.EqualTo(30));
         }
 
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
-        }
-
-
-
-        // Regulate
-
-        // SetThreshold(int thr)
-
-        // GetThreshold()
-
-        // GetCurTemp()
-
-        // RunSelfTest()
-
 
         [Test]
         public void GetCurTemp_TempIs17_Result17()
