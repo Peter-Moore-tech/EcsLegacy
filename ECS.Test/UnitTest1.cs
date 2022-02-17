@@ -72,6 +72,32 @@ namespace Test
 
 
 
-        // 
+        // Regulate
+
+        // SetThreshold(int thr)
+
+        // GetThreshold()
+
+        // GetCurTemp()
+
+        // RunSelfTest()
+
+
+        [Test]
+        public void GetCurTemp_TempIs17_Result17()
+        {
+            Assert.That(uut.GetCurTemp(), Is.EqualTo(17));
+        }
+
+        [Test]
+        public void RunSelfTest_SelfTestTrue_ResultTrue()
+        {
+            // Arrange
+            ItempSensor.
+
+            Assert.That(uut.RunSelfTest(),Is.EqualTo(true));
+        }
+
+
     }
 }
