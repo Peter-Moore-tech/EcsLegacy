@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECS.Legacy", "ECS.Legacy\EC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECS.Redesign", "ECS.Redesign\ECS.Redesign.csproj", "{D013F6CA-FDAB-46DE-96FB-DB9804E05B74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECS.Test", "ECS.Test\ECS.Test.csproj", "{86831DE7-2471-49D6-B290-45A9233ACD93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D013F6CA-FDAB-46DE-96FB-DB9804E05B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D013F6CA-FDAB-46DE-96FB-DB9804E05B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D013F6CA-FDAB-46DE-96FB-DB9804E05B74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86831DE7-2471-49D6-B290-45A9233ACD93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86831DE7-2471-49D6-B290-45A9233ACD93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86831DE7-2471-49D6-B290-45A9233ACD93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86831DE7-2471-49D6-B290-45A9233ACD93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
