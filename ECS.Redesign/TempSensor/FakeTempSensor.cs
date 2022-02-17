@@ -2,17 +2,17 @@
 {
     internal class FakeTempSensor: ITempSensor
     {
-        public int _randomNumber { get; set; } = 0;
+        public int RandomNumber { get; set; } = 0;
 
         public int GetTemp()    // Always returns 17
         {
-            _randomNumber = 17;
-            return _randomNumber;
+            RandomNumber = 17;
+            return RandomNumber;
         }
 
         public bool RunSelfTest()
         {
-            if (_randomNumber == 17)
+            if (RandomNumber == 17)
                 return true;
             return false;
         }
