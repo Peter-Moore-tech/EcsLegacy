@@ -19,12 +19,22 @@ namespace Redesign
 
         public void Regulate()
         {
-            var t = _tempSensor.GetTemp();
-            Console.WriteLine($"Temperature measured was {t}");
-            if (t < _threshold)
-                _heater.TurnOn();
-            else
+            try
+            {
+                var t = _tempSensor.GetTemp();
+                Console.WriteLine($"Temperature measured was {t}");
+                if (t < _threshold)
+                    _heater.TurnOn();
+                else
+                    _heater.TurnOff();
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
                 _heater.TurnOff();
+                Console.WriteLine("DET ER FOR KOLDT ELLER VARMT DET ER I HVERT FALD OUT OF RANGE");
+                throw;
+            }
+
         }
 
         public void SetThreshold(int thr)
