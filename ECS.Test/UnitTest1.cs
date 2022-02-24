@@ -40,19 +40,9 @@ namespace Test
             Assert.That(heater.HeaterStatus, Is.EqualTo(0));
         }
 
-        //public void Regulate()
-        //{
-        //    var t = _tempSensor.GetTemp();
-        //    Console.WriteLine($"Temperature measured was {t}");
-        //    if (t < _threshold)
-        //        _heater.TurnOn();
-        //    else
-        //        _heater.TurnOff();
-        //}
-
 
         [Test]
-        public void GetThreshold_Treshold23_Res23()
+        public void GetThreshold_Threshold23_Res23()
         {
             Assert.That(uut.GetThreshold(),Is.EqualTo(23));
         }
@@ -95,5 +85,25 @@ namespace Test
             Assert.That(uut.RunSelfTest(), Is.False);
         }
 
+        [Test]
+        public void Regulate_MockTurnedOn_Result1()
+        {
+            // Arrange
+            // Act
+            uut.Regulate();    // 17 is below threshold of 23 chosen in setup
+
+            Assert.That(heater.HeaterStatus, Is.EqualTo(1));
+        }
+
+        [Test]
+        public void Regulate_MockTurnedOff_Result0()
+        {
+            // Arrange
+            // Act
+            uut.SetThreshold(12);   
+            uut.Regulate(); // 17 is above threshold of 12
+
+            Assert.That(heater.HeaterStatus, Is.EqualTo(0));
+        }
     }
 }
