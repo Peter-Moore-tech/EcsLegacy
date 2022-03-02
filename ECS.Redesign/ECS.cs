@@ -56,10 +56,5 @@ namespace Redesign
         {
             return (_tempSensor.RunSelfTest() & _heater.RunSelfTest());
         }
-
-        public void dennefunction()
-        {
-            int a = 3;
-        }
     }
 }
