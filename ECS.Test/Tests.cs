@@ -14,6 +14,7 @@ namespace Test
         private ITempSensor tempSensor;
         private IHeater heater;
 
+
         [SetUp]
         public void Setup()
         {
@@ -22,15 +23,18 @@ namespace Test
             uut = new ECS(23, tempSensor, heater);
         }
 
-        [Test]
-        public void Regulate_GetTemp17Treshold23_ResHeaterTurnedOnOnce()
+
+        [TestCase(22,1)]
+        [TestCase(23,0)]
+        [TestCase(24,0)]
+        public void Regulate_GetTempTreshold23_HeaterStatus(int temp, int result)
         {
             //ACT
-            tempSensor.GetTemp().Returns(17);
+            tempSensor.GetTemp().Returns(temp);
             uut.Regulate();
 
             //ASSERT
-            heater.Received(1).TurnOn();
+            heater.Received(result).TurnOn();
         }
 
 
